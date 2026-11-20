@@ -135,6 +135,9 @@ export default function BlogPage() {
         <Link href="/home" className="text-lg transition-all duration-300 ease-out hover:opacity-60">
           home
         </Link>
+        <Link href="/portfolio" className="text-lg transition-all duration-300 ease-out hover:opacity-60">
+          portfolio
+        </Link>
       </nav>
 
       <aside className="fixed left-6 top-32 hidden lg:block w-64 z-20">

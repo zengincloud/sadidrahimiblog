@@ -10,6 +10,9 @@ export default function HomePage() {
         <Link href="/blog" className="text-lg transition-all duration-300 ease-out hover:opacity-60">
           blog
         </Link>
+        <Link href="/portfolio" className="text-lg transition-all duration-300 ease-out hover:opacity-60">
+          portfolio
+        </Link>
       </nav>
 
       <main className="max-w-4xl mx-auto px-6 pt-32 pb-20">
