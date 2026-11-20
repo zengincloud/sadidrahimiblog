@@ -19,8 +19,8 @@ async function quote(ticker: string, purchaseDate: string, entryOverride?: numbe
   const result = json?.chart?.result?.[0]
   if (!result) throw new Error("no data")
 
-  const closes: (number | null)[] = result.indicators?.quote?.[0]?.close ?? []
-  const entry = entryOverride ?? closes.find((c): c is number => typeof c === "number")
+  const opens: (number | null)[] = result.indicators?.quote?.[0]?.open ?? []
+  const entry = entryOverride ?? opens.find((c): c is number => typeof c === "number")
   const current: number | undefined = result.meta?.regularMarketPrice
   if (entry === undefined || current === undefined) throw new Error("no prices")
 

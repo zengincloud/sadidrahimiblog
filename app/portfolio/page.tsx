@@ -152,9 +152,8 @@ export default function PortfolioPage() {
             </div>
 
             <p className="text-sm text-white/40 mt-8 leading-relaxed">
-              Prices as of {new Date(data.asOf).toLocaleString()}. Entry is the closing price on the purchase date (or next
-              trading day), except ANT at $94.68; 2025 buys use Jan 2, 2025. Price return only, no dividends. DFN.TO trades in CAD and isn’t
-              converted. Not financial advice.
+              Prices as of {new Date(data.asOf).toLocaleString()}. Entry is the opening price on the purchase date. Price
+              return only, no dividends. CAD stocks are not converted. Not financial advice.
             </p>
           </>
         )}
