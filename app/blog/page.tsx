@@ -4,6 +4,32 @@ import Link from "next/link"
 
 const articles = [
   {
+    id: 3,
+    title: "Huang and the Hot New Stock on the Block",
+    date: "November 17, 2026",
+    content: `well shit the market’s been on an absolutely bloodbath the past couple weeks down almost 5% (i mean really whats a bloodbath, you’d be up 20% if you triple downed last year, or the year before that, or the year before that....)
+
+last year I wrote about the current turmoil of the market back then. This was prior to any Venezuela or iran condundrum, and its fascinating what quick turn of events transpired.
+
+But that’s not what we’re here for today. Today we’re buckled up for nvidia, anthropic, and the myriad failures our entire global system has seen ([Microsoft](https://www.cnbc.com/2026/11/17/apple-microsoft-faa-jpmorgan-outages.html), [apple](https://www.cnbc.com/2026/11/17/apple-microsoft-faa-jpmorgan-outages.html), [every other company melting down](https://www.cnbc.com/2026/11/17/apple-microsoft-faa-jpmorgan-outages.html))
+
+nvidia came out today with [q3 earnings](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027) and investors nodded in approval, but nothing otherwise. are they still looking for reassurance that this company is bigger than just uncle huang, after talks that [he might come back](https://www.sovereignmagazine.com/article/jensen-huang-return-nvidia)?
+
+Like the fact that anthropic is [anticipated to ipo tomorrow](https://mlq.ai/news/anthropics-ipo-what-to-know-before-wednesdays-pricing/). waiting in the wings in anticipation of where to transfer this newfound wealth, like anthropic’s first public offering
+
+despite any of this, though, markets will brush off the huang incident. they’ll brush off not having his illustrious regime at the helm, and markets will soar back on its triumphant way as it has been the last century
+
+but not until $ANT IPOs… maybe.
+
+Because even if and when anthropic offers, investors and institutions alike tend to possess this hesitance akin to asking if they can pet that (scary) dog. Like they’re allocating fear instead of money, to the hot new stock on the block. [The new oil](https://www.economist.com/finance-and-economics/2026/10/22/ai-compute-is-the-new-oil-and-needs-a-new-market), as they say
+
+Hell not even spacex was spared after its offering. [Shares are down](https://www.tikr.com/blog/spacex-stock-is-still-up-10-from-its-135-ipo-price-despite-a-34-pullback) and continues to get pummeled, along with [semiconductor index (Philly index)](https://247wallst.com/investing/2026/11/06/chip-stocks-just-had-their-second-worst-day-on-record/), and [the broader market as a whole](https://ca.investing.com/indices/us-spx-500).
+
+Every single thing is poised to go right back up, and you are a fool to buy in to the rhetoric that is a permanent downturn in the economy (read: the economy and markets are very mutually exclusive). Asset prices and jobs can take heaping piles of shit but it won’t matter when the S&P 500 hits $8200 by February.
+
+#btfd, and don’t look back`,
+  },
+  {
     id: 2,
     title: "Your 2025 Markets Wrapped",
     date: "December 23, 2025",
@@ -63,6 +89,26 @@ History suggests that cutting rates before housing, services inflation, and fina
 Which of the Kevins will defy these laws and continue to cause rampant inflation? Time will tell, but we know one thing: it won't be Fed Chair Powell (:cryingemoji)`,
   },
 ]
+
+// Renders [text](url) markdown-style links inside a paragraph as anchors.
+function renderWithLinks(text: string) {
+  const parts = text.split(/(\[[^\]]+\]\(https?:\/\/[^)\s]+\))/g)
+  return parts.map((part, i) => {
+    const match = part.match(/^\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)$/)
+    if (!match) return part
+    return (
+      <a
+        key={i}
+        href={match[2]}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline underline-offset-4 text-white hover:text-white/60 transition-colors"
+      >
+        {match[1]}
+      </a>
+    )
+  })
+}
 
 export default function BlogPage() {
   const scrollToArticle = (id: number) => {
@@ -127,7 +173,7 @@ export default function BlogPage() {
                           <em>{paragraph}</em>
                         </strong>
                       ) : (
-                        paragraph
+                        renderWithLinks(paragraph)
                       )}
                     </p>
                   )
