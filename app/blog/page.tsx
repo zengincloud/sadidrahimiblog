@@ -92,6 +92,12 @@ Which of the Kevins will defy these laws and continue to cause rampant inflation
   },
 ]
 
+// "November 17, 2026" -> "Nov 17, '26"
+function shortDate(date: string) {
+  const m = date.match(/^([A-Za-z]{3})[A-Za-z]*\s+(\d{1,2}),\s*\d{2}(\d{2})$/)
+  return m ? `${m[1]} ${m[2]}, '${m[3]}` : date
+}
+
 // Renders [text](url) markdown-style links inside a paragraph as anchors.
 function renderWithLinks(text: string) {
   const parts = text.split(/(\[[^\]]+\]\(https?:\/\/[^)\s]+\))/g)
@@ -141,6 +147,7 @@ export default function BlogPage() {
               className="block text-left text-sm leading-tight transition-all duration-300 ease-out hover:text-white hover:translate-x-1 text-white/60"
             >
               {article.title}
+              <span className="ml-2 text-[10px] text-white/30 whitespace-nowrap">{shortDate(article.date)}</span>
             </button>
           ))}
         </nav>
