@@ -20,6 +20,12 @@ export default function EntryPage() {
         >
           blog
         </Link>
+        <Link
+          href="/portfolio"
+          className="text-white text-6xl md:text-8xl font-sans tracking-tight transition-all duration-500 ease-out hover:tracking-widest hover:opacity-60"
+        >
+          portfolio
+        </Link>
       </nav>
     </div>
   )
