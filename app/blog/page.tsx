@@ -17,7 +17,7 @@ nvidia came out today with [q3 earnings](https://nvidianews.nvidia.com/news/nvid
 
 ![Jensen Huang’s post on X, Nov 17](/huang-tweet.png)
 
-Like the fact that anthropic is [anticipated to ipo tomorrow](https://mlq.ai/news/anthropics-ipo-what-to-know-before-wednesdays-pricing/). waiting in the wings in anticipation of where to transfer this newfound wealth, like anthropic’s first public offering
+Like the fact that anthropic is [anticipated to ipo tomorrow](https://mlq.ai/news/anthropics-ipo-what-to-know-before-wednesdays-pricing/). waiting in the wings in anticipation of where to transfer this newfound wealth
 
 despite any of this, though, markets will brush off the huang incident. they’ll brush off not having his illustrious regime at the helm, and markets will soar back on its triumphant way as it has been the last century
 
