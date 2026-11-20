@@ -15,6 +15,8 @@ But that’s not what we’re here for today. Today we’re buckled up for nvidi
 
 nvidia came out today with [q3 earnings](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027) and investors nodded in approval, but nothing otherwise. are they still looking for reassurance that this company is bigger than just uncle huang, after talks that [he might come back](https://www.sovereignmagazine.com/article/jensen-huang-return-nvidia)?
 
+![Jensen Huang’s post on X, Nov 17](/huang-tweet.png)
+
 Like the fact that anthropic is [anticipated to ipo tomorrow](https://mlq.ai/news/anthropics-ipo-what-to-know-before-wednesdays-pricing/). waiting in the wings in anticipation of where to transfer this newfound wealth, like anthropic’s first public offering
 
 despite any of this, though, markets will brush off the huang incident. they’ll brush off not having his illustrious regime at the helm, and markets will soar back on its triumphant way as it has been the last century
@@ -160,6 +162,19 @@ export default function BlogPage() {
                 {article.content.split("\n\n").map((paragraph, index) => {
                   const isSectionHeader =
                     paragraph === "International markets and its impact to the S&P" || paragraph === "The US Hegemony" || paragraph === "Bottom Line"
+
+                  const imageMatch = paragraph.match(/^!\[([^\]]*)\]\((\/[^)\s]+)\)$/)
+                  if (imageMatch) {
+                    return (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        key={index}
+                        src={imageMatch[2]}
+                        alt={imageMatch[1]}
+                        className="my-6 w-full max-w-xl rounded-xl border border-white/10"
+                      />
+                    )
+                  }
 
                   return (
                     <p
