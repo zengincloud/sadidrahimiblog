@@ -58,8 +58,12 @@ export default function PortfolioPage() {
 
       <main className="max-w-4xl mx-auto px-6 pt-32 pb-20">
         <h1 className="text-5xl md:text-6xl font-sans mb-6 text-balance">portfolio</h1>
-        <p className="text-xl text-white/70 leading-relaxed max-w-2xl mb-12">
+        <p className="text-xl text-white/70 leading-relaxed max-w-2xl mb-6">
           my current portfolio makeup, up to date and past purchases
+        </p>
+        <p className="text-white/50 leading-relaxed max-w-2xl mb-12">
+          this blog is in 2025, so it doesn’t fully encapsulate my entire past portfolio pickings. however, it has only
+          recently been going balls out, so i figure we start at this timeline anyhow.
         </p>
 
         {failed && <p className="text-white/60">couldn’t load prices right now, try again in a bit.</p>}
@@ -68,12 +72,15 @@ export default function PortfolioPage() {
         {data && (
           <>
             <p className="text-white/60 mb-8">
-              what {money(data.investment, 0)} in each would be worth today
+              assuming each entry i made was a {money(data.investment, 0)} starting point, what it would be worth today
               {ok.length > 0 && (
                 <>
                   {" "}
                   — <span className="text-white">{money(totalValue, 0)}</span> from {money(invested, 0)}{" "}
-                  <span className={totalGain >= 0 ? "text-emerald-400" : "text-red-400"}>({signed(totalGain)})</span>
+                  <span className={totalGain >= 0 ? "text-emerald-400" : "text-red-400"}>
+                    ({signed(totalGain)}, {totalGain >= 0 ? "+" : ""}
+                    {((totalValue / invested - 1) * 100).toFixed(1)}%)
+                  </span>
                 </>
               )}
             </p>

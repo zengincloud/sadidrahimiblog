@@ -13,6 +13,7 @@ export type Position = {
 // 2025 purchases use the first trading day of the year (Jan 2, 2025).
 export const positions: Position[] = [
   { ticker: "TSM", label: "Taiwan Semiconductor", purchaseDate: "2025-01-02" },
+  { ticker: "ASML", label: "ASML", purchaseDate: "2025-01-02" },
   { ticker: "NVDA", label: "NVIDIA", purchaseDate: "2025-01-02" },
   { ticker: "SPY", label: "S&P 500 ETF", purchaseDate: "2025-01-02" },
   { ticker: "DFN.TO", label: "Dividend 15 Split Corp.", purchaseDate: "2025-01-02" },
