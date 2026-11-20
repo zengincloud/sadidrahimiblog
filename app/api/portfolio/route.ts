@@ -25,7 +25,23 @@ async function quote(ticker: string, purchaseDate: string, entryOverride?: numbe
   if (entry === undefined || current === undefined) throw new Error("no prices")
 
   const value = (INVESTMENT / entry) * current
+
+  // Daily value of the $1,000 position, from the purchase date to now.
+  const stamps: number[] = result.timestamp ?? []
+  const closes: (number | null)[] = result.indicators?.quote?.[0]?.close ?? []
+  const offset: number = result.meta?.gmtoffset ?? 0
+  const series: { d: string; v: number }[] = []
+  stamps.forEach((t, i) => {
+    const c = closes[i]
+    if (typeof c !== "number") return
+    series.push({ d: new Date((t + offset) * 1000).toISOString().slice(0, 10), v: (INVESTMENT / entry) * c })
+  })
+  // Make the last point match the live price shown in the table.
+  if (series.length) series[series.length - 1].v = value
+  else series.push({ d: new Date().toISOString().slice(0, 10), v: value })
+
   return {
+    series,
     entryPrice: entry,
     currentPrice: current,
     currency: result.meta?.currency ?? "USD",

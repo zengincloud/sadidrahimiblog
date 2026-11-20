@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { useEffect, useState } from "react"
+import PortfolioCharts from "./portfolio-charts"
 
 type Row = {
   ticker: string
@@ -13,6 +14,7 @@ type Row = {
   value?: number
   gain?: number
   gainPct?: number
+  series?: { d: string; v: number }[]
   error?: boolean
 }
 
@@ -84,6 +86,8 @@ export default function PortfolioPage() {
                 </>
               )}
             </p>
+
+            <PortfolioCharts rows={data.rows} investment={data.investment} />
 
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse">
