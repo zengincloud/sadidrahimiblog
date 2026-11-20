@@ -25,9 +25,9 @@ but not until $ANT IPOs… maybe.
 
 Because even if and when anthropic offers, investors and institutions alike tend to possess this hesitance akin to asking if they can pet that (scary) dog. Like they’re allocating fear instead of money, to the hot new stock on the block. [The new oil](https://www.economist.com/finance-and-economics/2026/10/22/ai-compute-is-the-new-oil-and-needs-a-new-market), as they say
 
-Hell not even spacex was spared after its offering. [Shares are down](https://www.tikr.com/blog/spacex-stock-is-still-up-10-from-its-135-ipo-price-despite-a-34-pullback) and continues to get pummeled, along with [semiconductor index (Philly index)](https://247wallst.com/investing/2026/11/06/chip-stocks-just-had-their-second-worst-day-on-record/), and [the broader market as a whole](https://ca.investing.com/indices/us-spx-500).
+Hell not even spacex was spared after its offering. [Shares are down](https://www.tikr.com/blog/spacex-stock-is-still-up-10-from-its-135-ipo-price-despite-a-34-pullback) and continues to get pummeled, along with [semiconductor index (Philly index)](https://247wallst.com/investing/2026/11/06/chip-stocks-just-had-their-second-worst-day-on-record/), and [the broader market as a whole](https://ca.investing.com/indices/us-spx-500). the same could very well apply to anthropic for the foreseeable future
 
-Every single thing is poised to go right back up, and you are a fool to buy in to the rhetoric that is a permanent downturn in the economy (read: the economy and markets are very mutually exclusive). Asset prices and jobs can take heaping piles of shit but it won’t matter when the S&P 500 hits $8200 by February.
+regardless what the (temporary) outcome, every single asset is poised to go right back up, and you are a fool to buy in to the rhetoric that is a permanent downturn in the economy (read: the economy and markets are very mutually exclusive). Asset prices and jobs can take heaping piles of shit but it won’t matter when the S&P 500 hits $8200 by February.
 
 #btfd, and don’t look back`,
   },
